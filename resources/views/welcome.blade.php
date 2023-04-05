@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home</title>
+    <title>TulisSurat</title>
     <!-- Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,19 +20,18 @@
 </head>
 
 <body>
+
     {{-- Navbar start --}}
     <nav class="navbar">
         <img src="/images/tulisSuratIcon.png" alt="tulisSurat">
 
         <div class="navbar-nav">
-            <a href="#">
+            <a href="/#">
                 <img src="/images/homeIcon.png">Home</a>
-            <a href="#fitur">
+            <a href="/#fitur">
                 <img src="/images/fiturIcon.png">
                 Fitur</a>
-
-
-            <a href="#syarat">
+            <a href="/#syarat">
                 <img src="/images/syaratIcon.png">
                 Syarat</a>
             <a href="#tentang" class="tentangIcon">
@@ -61,7 +60,7 @@
                     dan cepat? <br>TulisSurat menyediakan berbagai
                     fitur unggulan<br>untuk memudahkan Anda. Gratis, Mudah, dan Cepat!
                 </p>
-                <a href="#" class="cta">Buat Surat</a>
+                <a href="/#fitur" class="cta">Buat Surat</a>
             </div>
             <span class="tulisImage">
 
@@ -103,7 +102,7 @@
         </span>
         <h2 class="titleJenis">Jenis-Jenis Surat</h2>
         <div class="jenisSurat">
-            <a href="" class="label">
+            <a href="/suratLamaran" class="label">
                 <img src="/images/LamaranLabel.png" alt="gambarLamaran">
                 <div class="labelkecil">
                     <h3>By TulisSurat</h3>
@@ -116,7 +115,7 @@
                 <span>Link Label</span>
             </a>
 
-            <a href="" class="label">
+            <a href="SPD" class="label">
                 <img src="/images/pengunduranDiri.png" alt="Gambar Label">
                 <div class="labelkecil">
                     <h3>By TulisSurat</h3>

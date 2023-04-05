@@ -23,3 +23,14 @@ document.addEventListener('click', function(e){
         navbarNav.classList.remove('active');
     }
 });
+// Cari tombol dengan ID "sun"
+const sunButton = document.querySelector('#sun');
+
+// Tambahkan event listener pada tombol
+sunButton.addEventListener('click', function() {
+  // Cari elemen <body> di dalam dokumen HTML
+  const bodyElement = document.querySelector('body');
+
+  // Tambahkan class 'dark' pada elemen <body> jika belum ada, atau hapus jika sudah ada
+  bodyElement.classList.toggle('dark');
+});
