@@ -1,8 +1,8 @@
-TULIS SURAT\n
-NAMA : KHAIRIL ILMI
-NPM : 2108107010011
-NAMA : RIDHO FERDIANSYAH
-NPM : 2108107010039
+TULIS SURAT<br>
+NAMA DEVELOPER:<br>
+1. KHAIRIL ILMI (2108107010011)
+2. RiDHO FERDIANSYAH (2108107010039)
+<br>
 
 Tulis Surat adalah sebuah platform inovatif yang dirancang untuk memudahkan pengguna dalam membuat surat secara cepat dan efisien. Website ini menyediakan layanan yang memungkinkan pengguna untuk menghasilkan surat dengan hanya memasukkan data-data penting, tanpa harus repot mengisi konten surat secara manual.
 
