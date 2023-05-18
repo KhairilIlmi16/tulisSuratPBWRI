@@ -12,6 +12,6 @@ Tulis Surat juga memiliki fitur pengeditan yang memungkinkan pengguna untuk meme
 Dengan menggunakan Tulis Surat, pengguna dapat menghemat waktu dan upaya yang diperlukan untuk membuat surat secara manual. Platform ini cocok digunakan oleh individu, profesional, atau perusahaan yang sering menghasilkan surat-surat resmi dalam rutinitas sehari-hari.
 aplikasi tulis surat generator
 Di sini perlu install 
-'''bash
+```bash
 // composer require phpoffice/phpword
-'''
+```
