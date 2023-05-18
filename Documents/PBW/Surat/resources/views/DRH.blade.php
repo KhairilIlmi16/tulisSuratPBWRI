@@ -1,75 +1,45 @@
-<!DOCTYPE html>
-<html>
+@extends('navbar')
+@section('navbar')
+    @parent
 
-<head>
-    <title>Form Daftar Riwayat Hidup</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-</head>
-
-<body>
-    <nav class="navbar">
-        <img src="/images/tulisSuratIcon.png" alt="tulisSurat">
-
-        <div class="navbar-nav">
-            <a href="/#">
-                <img src="/images/homeIcon.png">Home</a>
-            <a href="/#fitur">
-                <img src="/images/fiturIcon.png">
-                Fitur</a>
-            <a href="/#syarat">
-                <img src="/images/syaratIcon.png">
-                Syarat</a>
-            <a href="#tentang" class="tentangIcon">
-                <img src="/images/tentangIcon.png">
-                Tentang Kami
-            </a>
-        </div>
-        <div class="navbar-extra">
-            <a href="#" id="search"> <i data-feather="search"></i></a>
-            <a href="#" id="sun"> <i data-feather="moon"></i></a>
-            <a href="#" id="menu"> <i data-feather="menu"></i></a>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
+    <div class="container mt-28">
+        <div class="md:px-[100px] mt-28 bg-white shadow-lg mx-4 rounded-[30px] mt-4 flex-col md:flex font cursor-default px-8 py-8 md:mx-8 top-16">
         <h2 class="mb-4">Form Daftar Riwayat Hidup</h2>
-        <form method="post" action="{{ url('/proses-drh') }}">
+        <form method="post" action="{{ url('/proses-drh') }}" class="border border-gray-300 p-4 rounded-md">
             {{ csrf_field() }}
-            <div class="form-group">
-                <label for="nama">Nama Lengkap</label>
-                <input type="text" class="form-control" id="isiNama" name="isiNama"
+            <div class="mb-4 border shadow rounded-lg">
+                <label for="isiNama" class="block">Nama Lengkap</label>
+                <input type="text" class="form-input" id="isiNama" name="isiNama"
                     placeholder="Masukkan Nama Lengkap Anda" required />
             </div>
-            <div class="form-group">
-                <label for="nama">Tempat Lahir</label>
-                <input type="text" class="form-control" id="isiTempatLahir" name="isiTempatLahir"
+            <div class="mb-4 border shadow rounded-lg">
+                <label for="isiTempatLahir" class="block">Tempat Lahir</label>
+                <input type="text" class="form-input" id="isiTempatLahir" name="isiTempatLahir"
                     placeholder="Masukkan Tempat Lahir Anda" required />
             </div>
-            <div class="form-group">
-                <label for="nama">Tangal Lahir</label>
-                <input type="date" class="form-control" id="isiTglLahir" name="isiTglLahir"
+            <div class="mb-4 border shadow rounded-lg">
+                <label for="isiTglLahir" class="block">Tanggal Lahir</label>
+                <input type="date" class="form-input" id="isiTglLahir" name="isiTglLahir"
                     placeholder="Masukkan Tanggal Lahir Anda" required />
             </div>
-            <div class="form-group">
-                <label for="nama">Status</label>
-                <input type="text" class="form-control" id="isiStatus" name="isiStatus"
+            <div class="mb-4 border shadow rounded-lg">
+                <label for="isiStatus" class="block">Status</label>
+                <input type="text" class="form-input" id="isiStatus" name="isiStatus"
                     placeholder="Kawin/Belum Kawin" required />
             </div>
-            <div class="form-group">
-                <label for="">Jenis Kelamin <span class="text-danger">*<span></span></span></label>
-                <select class="form-control" name="isiKelamin" aria-label="Default select example" required="">
-                    <option selected="" value="">Pilih Jenis Kelamin</option>
+            <div class="mb-4 border shadow rounded-lg">
+                <label for="isiKelamin" class="block">Jenis Kelamin <span class="text-red-500">*</span></label>
+                <select class="form-select" name="isiKelamin" required>
+                    <option selected value="">Pilih Jenis Kelamin</option>
                     <option value="Laki-Laki">Laki-Laki</option>
                     <option value="Perempuan">Perempuan</option>
                 </select>
             </div>
-
-            <div class="form-group">
-                <label for="">Kewarganegaraan <span class="text-danger">*<span></span></span></label>
-                <select class="form-control" name="isiNegara" aria-label="Default select example" required="">
+        
+            <div class="mb-4 border shadow rounded-lg">
+                <label for="isiNegara" class="block">Kewarganegaraan <span class="text-red-500">*</span></label>
+                <select class="form-select" name="isiNegara" required>
+                    <option value="Afghanistan">Afghanistan</option>
                     <option value="Afghanistan">Afghanistan</option>
                     <option value="Åland Islands">Åland Islands</option>
                     <option value="Albania">Albania</option>
@@ -321,7 +291,7 @@
                     <option value="Zimbabwe">Zimbabwe</option>
                 </select>
             </div>
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="">Agama <span class="text-danger">*<span></span></span></label>
                 <select class="form-control" name="isiAgama" aria-label="Default select example" required="">
                     <option selected="" value="">Pilih Agama</option>
@@ -335,38 +305,40 @@
                 </select>
             </div>
 
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="nama">No. Telepon</label>
                 <input type="text" class="form-control" id="isiNoHp" name="isiNoHp" placeholder="0822 xxx xxx"
                     required />
             </div>
 
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="nama">Email</label>
                 <input type="text" class="form-control" id="isiEmail" name="isiEmail"
                     placeholder="maele123@gmail.com" required />
             </div>
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="pendidikan">Pendidikan</label>
-                <textarea name="isiPendidikan" rows="4" class="form-control"></textarea>
+                <textarea name="isiPendidikan" rows="4" class="border w-[450px] m-4 rounded-lg md:w-11/12"></textarea>
             </div>
 
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="keahlian">Keahlian</label>
-                <textarea name="isiKeahlian" rows="4" class="form-control"></textarea>
+                <textarea name="isiKeahlian" rows="4" class="border w-[450px] m-4 rounded-lg md:w-11/12"></textarea>
             </div>
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="organisasi">Organisasi</label>
-                <textarea name="isiOrganisasi" rows="4" class="form-control"></textarea>
+                <textarea name="isiOrganisasi" rows="4" class="border w-[450px] m-4 rounded-lg md:w-11/12"></textarea>
             </div>
-            <div class="form-group">
+            <div class="mb-4 border shadow rounded-lg">
                 <label for="tanggal">Alamat</label>
-                <textarea name="isiAlamat" rows="4" class="form-control"></textarea>
+                <textarea name="isiAlamat" rows="4" class="border w-[450px] m-4 rounded-lg md:w-11/12"></textarea>
             </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Buat Surat</button>
+            <div class="form-group mt-2 text-end">
+                <input type="submit" value="Download Surat" name="submit" class="flex w-[150px] mt-[20px] mx-auto px-auto bg-gradient-to-r from-yellow-600 to-yellow-300 rounded-lg p-2 hover:from-blue-500 hover:to-blue-200 md:w-[140px] md:text-sm md:mx-auto md:mx-0 md:mb-8 md:mt-8 text-white  ">
+            </div>
+         </div>
     </form>
     </div>
-</body>
+    
+</div>
 
-</html>

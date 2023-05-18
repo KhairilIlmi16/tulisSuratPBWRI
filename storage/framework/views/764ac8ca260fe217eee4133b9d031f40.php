@@ -1,17 +1,17 @@
-@extends('navbar')
-@section('navbar')
-    @parent
-    <div class="surat mt-28">
-        <div class="surat-body md:px-[100px] mt-28 bg-white shadow-lg mx-4 rounded-[30px] mt-4 flex-col md:flex font cursor-default px-8 py-8 md:mx-8 top-16">
-            <h5 class="font-bold">FORMULIR DATA PRIBADI</h5>
+<?php $__env->startSection('navbar'); ?>
+    <?php echo \Illuminate\View\Factory::parentPlaceholder('navbar'); ?>
+    <div class="surat mb-4">
+        <div class="surat-body">
+            <h5>FORMULIR DATA PRIBADI</h5>
             <hr style="color:blue">
 
-            <form method="post" action="{{ url('/proses-lamaran-docx') }}" class="php-email-form mt-4">
-                {{ csrf_field() }}
+            <form method="post" action="<?php echo e(url('/proses-lamaran-docx')); ?>" class="php-email-form">
+                <?php echo e(csrf_field()); ?>
+
                 <div class="row pt-2">
                     <div class="form-group">
                         <label for="name">Nama Lengkap <span class="text-danger">*<span></span></span></label>
-                        <input type="text" name="nama" value="" class="form-control border"
+                        <input type="text" name="nama" value="" class="form-control"
                             placeholder="Contoh : Khairil Ilmi" required="">
                     </div>
                     <div class="col-md-6 form-group">
@@ -72,7 +72,7 @@
 
         </div>
     </div>
-    <div class="surat md:px-[100px] mt-28 bg-white shadow-lg mx-4 rounded-[30px] mt-4 flex-col md:flex font cursor-default px-8 py-8 md:mx-8">
+    <div class="surat">
         <div class="surat-body">
             <h5 class="">FORMULIR DATA LAMARAN</h5>
             <hr style="color:blue">
@@ -80,7 +80,7 @@
                 <label for="name">Nama Perusahaan <span class="text-danger">*<span></span></span></label>
                 <input type="text" class="form-control" name="perusahaan" id="namaPerusahaan"
                     placeholder="Contoh : PT. Shopee">
-               
+                </Shopee <div class="row pt-2">
                 <div class="col-md-6  form-group">
                     <label for="">Posisi / Jabatan <span class="text-danger">*<span></span></span></label>
                     <input type="text" class="form-control" name="posisi" value=""
@@ -100,7 +100,7 @@
         </div>
     </div>
 
-    <div class="surat mt-28 md:px-[100px] mt-28 bg-white shadow-lg mx-4 rounded-[30px] mt-4 flex-col md:flex font cursor-default px-8 py-8 md:mx-8">
+    <div class="surat mt-3">
         <div class="surat-body">
             <div class="form-group mt-2">
                 <input type="checkbox" id="check" name="check" value="" required="">
@@ -109,10 +109,12 @@
                     Berlaku</label><br>
             </div>
             <div class="form-group mt-2 text-end">
-                <input type="submit" value="Download Surat" name="submit" class="flex w-[150px] mt-[20px] mx-auto px-auto bg-gradient-to-r from-yellow-600 to-yellow-300 rounded-lg p-2 hover:from-blue-500 hover:to-blue-200 md:w-[140px] md:text-sm md:mx-auto md:mx-0 md:mb-8 md:mt-8 text-white  ">
+                <input type="submit" value="Download Surat" name="submit" class="btn btn-primary">
             </div>
 
         </div>
         </form>
     </div>
+    </body>
 
+<?php echo $__env->make('navbar', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH D:\Project\tulisSuratPBWRI1\resources\views/suratLamaran.blade.php ENDPATH**/ ?>

@@ -1,94 +1,62 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <title>Form Izin Orang Tua</title>
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
-</head>
-
-<body>
-    <nav class="navbar">
-        <img src="/images/tulisSuratIcon.png" alt="tulisSurat">
-
-        <div class="navbar-nav">
-            <a href="/#">
-                <img src="/images/homeIcon.png">Home</a>
-            <a href="/#fitur">
-                <img src="/images/fiturIcon.png">
-                Fitur</a>
-            <a href="/#syarat">
-                <img src="/images/syaratIcon.png">
-                Syarat</a>
-            <a href="#tentang" class="tentangIcon">
-                <img src="/images/tentangIcon.png">
-                Tentang Kami
-            </a>
-        </div>
-        <div class="navbar-extra">
-            <a href="#" id="search"> <i data-feather="search"></i></a>
-            <a href="#" id="sun"> <i data-feather="moon"></i></a>
-            <a href="#" id="menu"> <i data-feather="menu"></i></a>
-        </div>
-    </nav>
-
-    <div class="container mt-4">
-        <h2 class="mb-4">Surat Izin Orang Tua</h2>
+@extends('navbar')
+@section('navbar')
+    @parent
+    <div class="container mt-28">
+        <div class="surat-body md:px-[100px] mt-28 bg-white shadow-lg mx-4 rounded-[30px] mt-4 flex-col md:flex font cursor-default px-8 py-8 md:mx-8 top-16">
+        <h2 class="mb-4 font-bold text-2xl">Surat Izin Orang Tua</h2>
         <form method="post" action="{{ url('/proses-izinOrtu') }}">
             {{ csrf_field() }}
             <div class="container mt-4">
-                <h3>Biodata Orang Tua</h3>
-                <div class="form-group">
+                <h3>Biodata Orang Tua :</h3>
+                <div class="form-group mt-8">
                     <label for="nama">Nama Orang Tua</label>
-                    <input type="text" class="form-control" id="isiNamaOrtu" name="isiNamaOrtu"
+                    <input type="text" class="border rounded-lg border-gray" id="isiNamaOrtu" name="isiNamaOrtu"
                         placeholder="Masukkan Nama Lengkap Anda" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="ktp">No. KTP</label>
-                    <input type="text" class="form-control" id="isiNoKtp" name="isiNoKtp"
+                    <input type="text" class="border rounded-lg border-gray" id="isiNoKtp" name="isiNoKtp"
                         placeholder="xxxxxxxxxxxxxx" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="tempatLahir">Tempat Lahir</label>
-                    <input type="text" class="form-control" id="isiTempatLahirOrtu" name="isiTempatLahirOrtu"
+                    <input type="text" class="border rounded-lg border-gray" id="isiTempatLahirOrtu" name="isiTempatLahirOrtu"
                         placeholder="Masukkan Tempat Lahir Anda" required />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="tglOrtu">Tangal Lahir</label>
-                    <input type="date" class="form-control" id="isiTglLahirOrtu" name="isiTglLahirOrtu"
+                    <input type="date" class="border rounded-lg border-gray" id="isiTglLahirOrtu" name="isiTglLahirOrtu"
                         placeholder="Masukkan Tanggal Lahir Orang Tua" required />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="pekerjaanOrtu">Pekerjaan Orang Tua</label>
-                    <input type="text" class="form-control" id="isiPekerjaanOrtu" name="isiPekerjaanOrtu"
+                    <input type="text" class="border rounded-lg border-gray" id="isiPekerjaanOrtu" name="isiPekerjaanOrtu"
                         placeholder="Masukkan Pekerjaan Orang Tua" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="noTeleponOrtu">No. Telepon Orang Tua</label>
-                    <input type="text" class="form-control" id="isiNoTeleponOrtu" name="isiNoTeleponOrtu"
+                    <input type="text" class="border rounded-lg border-gray" id="isiNoTeleponOrtu" name="isiNoTeleponOrtu"
                         placeholder="08xx xxxx xxxx" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="alamatOrtu">Alamat Orang Tua</label>
-                    <textarea name="isiAlamatOrtu" rows="4" class="form-control"></textarea>
+                    <textarea name="isiAlamatOrtu" rows="4" class="border rounded-lg border-gray"></textarea>
                 </div>
 
             </div>
 
             <div class="container mt-4">
                 <h3>Biodata Anak</h3>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="nama">Nama Anak</label>
-                    <input type="text" class="form-control" id="isiNamaAnak" name="isiNamaAnak"
+                    <input type="text" class="border rounded-lg border-gray" id="isiNamaAnak" name="isiNamaAnak"
                         placeholder="Masukkan Nama Lengkap Anak" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="pendidikan">Pendidikan</label>
-                    <select class="form-control" name="isiPendidikanAnak" aria-label="Default select example"
+                    <select class="border rounded-lg border-gray" name="isiPendidikanAnak" aria-label="Default select example"
                         required="">
                         <option selected="" value="">Pilih Jenjang Pendidikan</option>
                         <option value="TK">TK/PAUD</option>
@@ -101,43 +69,46 @@
                         <option value="S1">S1</option>
                     </select>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="tempatLahir">Tempat Lahir Anak</label>
-                    <input type="text" class="form-control" id="isiTempatLahirAnak" name="isiTempatLahirAnak"
+                    <input type="text" class="border rounded-lg border-gray" id="isiTempatLahirAnak" name="isiTempatLahirAnak"
                         placeholder="Masukkan Tempat Lahir Anda" required />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="tglAnak">Tangal Lahir</label>
-                    <input type="date" class="form-control" id="isiTglLahirAnak" name="isiTglLahirAnak"
+                    <input type="date" class="border rounded-lg border-gray" id="isiTglLahirAnak" name="isiTglLahirAnak"
                         placeholder="Masukkan Tanggal Lahir Anak" required />
                 </div>
 
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="alamatAnak">Alamat Anak</label>
-                    <textarea name="isiAlamatAnak" rows="4" class="form-control"></textarea>
+                    <textarea name="isiAlamatAnak" rows="4" class="border rounded-lg border-gray"></textarea>
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="organisasi">Kegiatan</label>
-                    <input type="text" class="form-control" id="isiKegiatan" name="isiKegiatan"
+                    <input type="text" class="border rounded-lg border-gray" id="isiKegiatan" name="isiKegiatan"
                         placeholder="Masukkan Kegiatan yang akan anda lakukan" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="nama">Tempat Pembuatan Surat</label>
-                    <input type="text" class="form-control" id="isiTempatBuatSurat" name="isiTempatBuatSurat"
+                    <input type="text" class="border rounded-lg border-gray" id="isiTempatBuatSurat" name="isiTempatBuatSurat"
                         placeholder="Masukkan Tempat Pembuatan Surat" required />
                 </div>
-                <div class="form-group">
+                <div class="form-group mt-8">
                     <label for="nama">Tangal Pembuatan Surat</label>
-                    <input type="date" class="form-control" id="isiTanggalSurat" name="isiTanggalSurat"
+                    <input type="date" class="border rounded-lg border-gray" id="isiTanggalSurat" name="isiTanggalSurat"
                         placeholder="Masukkan Tanggal Pembuatan Surat" required />
                 </div>
+                
+                    <div class="form-group mt-2 text-end">
+                        <input type="submit" value="Download Surat" name="submit" class="flex w-[150px] mt-[20px] mx-auto px-auto bg-gradient-to-r from-yellow-600 to-yellow-300 rounded-lg p-2 hover:from-blue-500 hover:to-blue-200 md:w-[140px] md:text-sm md:mx-auto md:mx-0 md:mb-8 md:mt-8 text-white  ">
+                    </div>
             </div>
     </div>
-
-    <button type="submit" class="btn btn-primary">Buat Surat</button>
+<br>
+<br>
+<br>
     </form>
     </div>
-</body>
-
-</html>
+</div>
