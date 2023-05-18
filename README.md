@@ -3,6 +3,8 @@
 1. KHAIRIL ILMI (2108107010011)<br>
 2. RiDHO FERDIANSYAH (2108107010039)</h2>
 <br>
+<h3>Path yang didownload di : Documents/PBW/Surat</h3>
+<br>
 
 Tulis Surat adalah sebuah platform inovatif yang dirancang untuk memudahkan pengguna dalam membuat surat secara cepat dan efisien. Website ini menyediakan layanan yang memungkinkan pengguna untuk menghasilkan surat dengan hanya memasukkan data-data penting, tanpa harus repot mengisi konten surat secara manual.
 
