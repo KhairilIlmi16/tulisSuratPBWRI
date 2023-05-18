@@ -5,7 +5,7 @@
 <br>
 <h3>Path yang didownload di : Documents/PBW/Surat</h3>
 <br>
-
+<a href="https://github.com/KhairilIlmi16/tulisSuratPBWRI/tree/main/Documents/PBW/Surat"><b>Di Sini</b></a>
 Tulis Surat adalah sebuah platform inovatif yang dirancang untuk memudahkan pengguna dalam membuat surat secara cepat dan efisien. Website ini menyediakan layanan yang memungkinkan pengguna untuk menghasilkan surat dengan hanya memasukkan data-data penting, tanpa harus repot mengisi konten surat secara manual.
 
 Dengan menggunakan Tulis Surat, pengguna dapat dengan mudah menghasilkan surat-surat seperti surat pengunduran diri, surat permohonan, surat penawaran, surat pemberitahuan, dan berbagai jenis surat lainnya. Pengguna hanya perlu memasukkan informasi yang diperlukan, seperti nama pengirim, alamat, tanggal, nama penerima, dan tujuan surat. Setelah data tersebut diisi, sistem akan secara otomatis menghasilkan surat lengkap dengan format dan tata bahasa yang sesuai.
